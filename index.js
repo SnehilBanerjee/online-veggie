@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-let items = ["tomato", "potato", "broccoli", "Ginger"]
+let items = ["tomato", "potato", "broccoli", "Ginger", "apple"]
 app.post("/items", (req, res, next) => {
     items.push(req.body.item)
     res.json({ status: 200, message: `Added items ${req.body.item}` });
